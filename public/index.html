@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPL Dataset visualization</title>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row justify-content-start align-items-center">
+            <div class="col-12 p-4 my-3">
+                <h1 class="display-4">IPL Dataset visualization</h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="static" class="container"></div>
+
+    <div id="yearSelection" class="hide container-fluid bg-light p-4 my-3">
+        <div class="row justify-content-center align-items-center m-auto flex-column">
+            <h2>IPL Data visualization Per Year</h2>
+            <form id="fm" id="getData">
+                <div class="form-group">
+                    <input name = "ip" type="text" placeholder="Enter Year" id="input_yr">
+                </div>
+                <button type="submit" id="sub_yr">SUBMIT</button>
+            </form>
+            <h4 id = "err_msg" class="errmsg"></h4>
+        </div>
+    </div>
+
+    <div id="dynamic" class="container"></div>
+
+    <script src="https://code.highcharts.com/highcharts.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>
