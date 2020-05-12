@@ -1,15 +1,19 @@
 const express = require('express');
 const getData = require('../datafile/toGetDataFile');
-const getDataYearVise = require('../datafile/toGetDataFileYear')
-
+const getDataYearVise = require('../datafile/toGetDataFileYear');
+const fs = require("fs");
+const path = require('path');
 const route = express.Router();
 
-route.get('/getStaticData',(req,res)=>{
-
-    getData().then(result=>{
-        res.send(result)
+(async function(){
+    const result = await getData()
+    await fs.writeFile(path.join(__dirname,'../public/data.json'), JSON.stringify(result),'utf8',(err)=>{
+        if(err){
+            console.log(err);
+        }
     })
-})
+})()
+
 
 route.post('/getdata',(req,res)=>{
     if(parseInt(req.query.year)>2019 || parseInt(req.query.year)<2008){

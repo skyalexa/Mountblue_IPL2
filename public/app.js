@@ -1,8 +1,8 @@
-
+const url = "http://localhost:5000"
 const static  = document.getElementById('static');
 
 window.onload = function(event){
-fetch(url+'/getStaticData')
+fetch('./data.json')
 .then(res => res.json())
 .then(obj => {
     static.innerHTML = ""
