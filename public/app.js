@@ -1,4 +1,4 @@
-const url = "http://localhost:5000"
+const url = "https://mntblu-ipl-part2.herokuapp.com/"
 const static  = document.getElementById('static');
 
 window.onload = function(event){
