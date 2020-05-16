@@ -1,4 +1,4 @@
-const url = "https://akash-mntblu-ipl-part2.herokuapp.com"
+const url = "https://mntblu-ipl-part2.herokuapp.com"
 const static  = document.getElementById('static');
 
 window.onload = function(event){
